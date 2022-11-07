@@ -2,14 +2,19 @@
   padding: 0 2rem;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.form { 
+  max-width: 800px;
+}
+
+.formGroup {
+  margin-bottom: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.formGroup label {
+  margin-bottom: .5rem;
 }
 
 .footer {
