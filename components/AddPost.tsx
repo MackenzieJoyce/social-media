@@ -17,7 +17,7 @@ const AddPost = () => {
                 <label htmlFor="image">Image</label>
                     <input type="file" />
                 </div>
-                <input type="submit" value="Add Post" />
+                <input type="submit" value="Add Post" className={styles.btn} />
             </form>
         </>
     )

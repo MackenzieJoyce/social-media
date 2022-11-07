@@ -17,6 +17,10 @@
   margin-bottom: .5rem;
 }
 
+.btn { 
+  padding: .5rem;
+}
+
 .footer {
   display: flex;
   flex: 1;
