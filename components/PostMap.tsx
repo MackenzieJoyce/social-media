@@ -5,7 +5,7 @@ const PostMap = ({ data }) => {
                 <div key={post.id}>
                     <h4>{post.username}</h4>
                     <p>{post.content}</p>
-                    {/* <img></img> */}
+                    <img></img>
                 </div>
             ))}
         </div>
