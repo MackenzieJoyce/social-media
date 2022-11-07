@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
-import Post from '../components/Post'
+import ExistingPosts from '../components/ExistingPosts'
 import AddPost from '../components/AddPost'
 import styles from '../styles/Home.module.css'
 
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <AddPost />
-      <Post />
+      <ExistingPosts />
     </>
   )
 }

@@ -1,8 +1,9 @@
 import { data } from "../data";
 
-const Post = () => {    
+const ExistingPosts = () => {    
     return (
         <>
+            <h2>Existing Posts</h2>
             {data.map((post) => (
                 <div key={post.id}>
                     <h4>{post.username}</h4>
@@ -14,4 +15,4 @@ const Post = () => {
     );
 }
 
-export default Post
+export default ExistingPosts
