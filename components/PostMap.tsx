@@ -1,14 +1,16 @@
+import styles from '../styles/Home.module.css'
+
 const PostMap = ({ data }) => {
     return (
-        <div>
+        <>
             {data.map((post:any) => (
-                <div key={post.id}>
+                <div key={post.id} className={styles.card}>
                     <h4>{post.username}</h4>
                     <p>{post.content}</p>
                     <img></img>
                 </div>
             ))}
-        </div>
+        </>
     )
 }
 
