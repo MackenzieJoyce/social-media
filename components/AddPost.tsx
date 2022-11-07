@@ -9,6 +9,7 @@ const AddPost = () => {
                 <textarea placeholder="Content" rows="4" cols="50" />
                 <label htmlFor="image">Image</label>
                 <input type="file" />
+                <input type="submit" value="Add Post" />
             </form>
         </>
     )
