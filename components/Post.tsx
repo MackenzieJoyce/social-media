@@ -1,3 +1,5 @@
+import { data } from "../data";
+
 const Post = () => {    
     return (
         <>
