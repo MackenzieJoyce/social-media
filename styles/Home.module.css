@@ -18,6 +18,10 @@
   margin-bottom: .5rem;
 }
 
+.formGroup > input { 
+  max-width: 200px;
+}
+
 .btn { 
   padding: .5rem;
 }
