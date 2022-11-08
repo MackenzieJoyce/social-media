@@ -5,8 +5,11 @@ import Header from '../components/Header';
 // import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import Button from '@mui/material/Button';
+
 
 const Home = ({ posts }) => {
+  // const blue : string = 'color: #42a5f5';
   return (
     <>
       {/* Commented out while I make it a modal... File moved into pages/api/posts */}
@@ -23,11 +26,13 @@ const Home = ({ posts }) => {
                 <p>{post.content}</p>
 
                 <Link href={`/${post._id}`}>
-                  <button>Delete</button>
+                  <Button variant="outlined" color="error">
+                    Delete
+                  </Button>
                 </Link>
 
                 <Link href={`/${post._id}/edit`}>
-                  <button>Edit</button>
+                <Button variant="contained" color='info'>Edit</Button>
                 </Link>
                 {/* <img></img> */}
               </div>
