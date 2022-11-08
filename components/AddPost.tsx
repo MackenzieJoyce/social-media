@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 
 const AddPost = () => {
 
-    const addPost = async (event:any) => {
+    const handleAddPost = async (event:any) => {
         event.preventDefault();
         
 
@@ -11,7 +11,7 @@ const AddPost = () => {
     return (
         <>
             <h2>Add Post</h2>
-            <form className={styles.form}>
+            <form onSubmit={handleAddPost} className={styles.form}>
                 <div className={styles.formGroup}>
                 <label htmlFor="username">Username</label>
                     <input
