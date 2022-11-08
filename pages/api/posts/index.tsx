@@ -12,7 +12,7 @@ export default async (req: any, res: any) => {
         const posts = await Post.find({});
         res.status(200).json({ success: true, data: posts });
       } catch (error) {
-        res.status(400).json({ success: false });
+        res.status("Error on GET try" + 400).json({ success: false });
       }
       break;
     case 'POST':
@@ -20,7 +20,7 @@ export default async (req: any, res: any) => {
         const post = await Post.create(req.body);
         res.status(201).json({ success: true, data: post });
       } catch (error) {
-        res.status(400).json({ success: false });
+        res.status("Error on POST try" + 400).json({ success: false });
       }
       break;
     default:

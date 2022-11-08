@@ -2,42 +2,44 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
-import { log } from 'console';
     
 const AddPost = () => {
     const [formState, setFormState] = useState({
         username: '',
-        content: '',
+        content: ''
     });
     console.log(formState);
     const router = useRouter();
 
-    const handleChange = (event) => {
+    const handleChange = (event:any) => {
         const { name, value } = event.target;
+
         setFormState({
             ...formState,
             [name]: value,
         });
     };
 
-    const handleFormSubmit = async (event:any) => {
+    const handleFormSubmit = async (event: any) => {
         event.preventDefault();
 
-        try { 
-            const res = await fetch('http://localhost:3000/api/posts', { 
+        console.log("Post entry was submitted!");
+        
+        try {
+            const res = await fetch('http://localhost:3000/api/posts', {
                 method: 'POST',
-                body: JSON.stringify(formState),
-                headers: { 
+                headers: {
+                    'Accept': 'application/json',
                     'Content-Type': 'application/json',
                 },
+                body: JSON.stringify(formState),
             });
-            const { data } = await res.json();
-            console.log(data);
             router.push('/');
         } catch (error) {
-            console.log(error);
+            console.log("Error on handleFormSubmit " + error);
         }
-    }
+    };
+
 
     return (
         <>
@@ -47,19 +49,19 @@ const AddPost = () => {
                 <label htmlFor="username">Username</label>
                     <input
                         type="text"
+                        name="username"
                         id="username"
                         required
                         onChange={handleChange}
-                        // value={formState.username}
                         placeholder="Username" />
                 </div>
                 <div className={styles.formGroup}>
                 <label htmlFor="content">Content</label>
                     <textarea
                         id="content"
+                        name="content"
                         required
                         onChange={handleChange}
-                        // value={formState.content}
                         placeholder="Enter a message"
                         rows="4" cols="50" />
                 </div>
