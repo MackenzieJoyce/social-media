@@ -20,6 +20,8 @@ const Post = ({ post }) => {
     return (
         <>
             {/* Create modal */}
+            <h4>{post.username}</h4>
+            <p>{post.content}</p>
             <p>Are you sure?</p>
             <button onClick={handleDeletePost}>Yes</button>
             <button>No</button>

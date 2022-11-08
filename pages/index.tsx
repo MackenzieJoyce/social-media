@@ -3,6 +3,7 @@ import Header from '../components/Header';
 // import ExistingPosts from '../components/ExistingPosts';
 // import AddPost from './api/posts/add-post';
 // import { useState } from 'react';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 const Home = ({ posts }) => {
@@ -21,8 +22,13 @@ const Home = ({ posts }) => {
             return (
               <div key={post._id} className={styles.card}>
                 <h4>{post.username}</h4>
+
                 <p>{post.content}</p>
-                <button>Delete</button>
+
+                <Link href={`/${post._id}`}>
+                  <button>Delete</button>
+                </Link>
+
                 <button>Edit</button>
                 {/* <img></img> */}
               </div>
