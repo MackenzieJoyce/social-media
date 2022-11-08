@@ -8,16 +8,13 @@ import styles from '../styles/Home.module.css';
 
 const Home = ({ posts }) => {
   return (
-    <div className={styles.container}>
-      <header>
-        <Header />
-      </header>
-
-      <main>
-        {/* Commented out while I make it a modal... File moved into pages/api/posts */}
-        {/* <AddPost /> */}
-        {/* <ExistingPosts /> */}
-        <section>
+    <>
+      {/* Commented out while I make it a modal... File moved into pages/api/posts */}
+      {/* <AddPost /> */}
+      {/* <ExistingPosts /> */}
+      <section>
+        <h2>Existing Posts</h2>
+        <div>
           {posts.map((post: any) => {
             return (
               <div key={post._id} className={styles.card}>
@@ -36,9 +33,9 @@ const Home = ({ posts }) => {
               </div>
             );
           })}
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+    </>
   );
 };
 
