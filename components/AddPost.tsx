@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
 const AddPost = () => {
+    const [username, setUsername] = useState('');
+    const [content, setContent] = useState('');
 
     const handleAddPost = async (event:any) => {
         event.preventDefault();
-        
     }
 
     return (
