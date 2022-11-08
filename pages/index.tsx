@@ -29,7 +29,9 @@ const Home = ({ posts }) => {
                   <button>Delete</button>
                 </Link>
 
-                <button>Edit</button>
+                <Link href={`/${post._id}/edit`}>
+                  <button>Edit</button>
+                </Link>
                 {/* <img></img> */}
               </div>
             );
