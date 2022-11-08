@@ -2,7 +2,7 @@
 import Header from '../components/Header';
 // import ExistingPosts from '../components/ExistingPosts';
 // import AddPost from './api/posts/add-post';
-import { useState } from 'react';
+// import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 const Home = ({ posts }) => {

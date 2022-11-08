@@ -1,4 +1,22 @@
+import { useRouter } from "next/router";
+
 const Post = ({ post }) => {
+    const router = useRouter();
+
+    const handleDeletePost = async () => {
+        const postid = router.query.id;
+        try {
+            const res = await fetch(`http://localhost:3000/api/posts/${postid}`, {
+                method: 'DELETE'
+            });
+            alert('Post deleted!');
+            router.push('/');
+        } catch (error) {
+            console.log("Error in DELETE");
+        }
+    };
+
+
     return (
         <>
             {/* Create modal */}
