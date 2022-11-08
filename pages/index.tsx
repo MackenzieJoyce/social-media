@@ -17,7 +17,7 @@ const Home = ({ posts }) => {
       {/* <ExistingPosts /> */}
       <section>
         <h2>Existing Posts</h2>
-        <div>
+        <div className={styles.reverse}>
           {posts.map((post: any) => {
             return (
               <div key={post._id} className={styles.card}>

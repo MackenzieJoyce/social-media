@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.reverse { 
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .form { 
   max-width: 800px;
   margin: 1rem;
