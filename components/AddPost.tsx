@@ -1,6 +1,15 @@
 import styles from '../styles/Home.module.css'
 
 const AddPost = () => {
+
+    const addPost = async (event:any) => {
+        event.preventDefault();
+
+        // Validate the form 
+
+        // Get the form data 
+    }
+
     return (
         <>
             <h2>Add Post</h2>
@@ -17,7 +26,7 @@ const AddPost = () => {
                 <label htmlFor="image">Image</label>
                     <input type="file" />
                 </div>
-                <input type="submit" value="Add Post" className={styles.btn} />
+                <input type="submit" value="Add Post" className={styles.btn} onClick={addPost} />
             </form>
         </>
     )
