@@ -1,20 +1,11 @@
-// import Head from 'next/head';
-import Header from '../components/Header';
-// import ExistingPosts from '../components/ExistingPosts';
-// import AddPost from './api/posts/add-post';
-// import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Button from '@mui/material/Button';
 
 
 const Home = ({ posts }) => {
-  // const blue : string = 'color: #42a5f5';
   return (
     <>
-      {/* Commented out while I make it a modal... File moved into pages/api/posts */}
-      {/* <AddPost /> */}
-      {/* <ExistingPosts /> */}
       <section>
         <h2>Existing Posts</h2>
         <div className={styles.reverse}>
@@ -34,7 +25,6 @@ const Home = ({ posts }) => {
                 <Link href={`/${post._id}/edit`}>
                 <Button variant="contained" color='info'>Edit</Button>
                 </Link>
-                {/* <img></img> */}
               </div>
             );
           })}
