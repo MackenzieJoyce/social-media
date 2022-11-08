@@ -5,7 +5,6 @@ const AddPost = () => {
     const handleAddPost = async (event:any) => {
         event.preventDefault();
         
-
     }
 
     return (
@@ -18,6 +17,7 @@ const AddPost = () => {
                         type="text"
                         id="username"
                         required
+                        onChange={(event) => setUsername(event.target.value)}
                         placeholder="Username" />
                 </div>
                 <div className={styles.formGroup}>
@@ -25,6 +25,7 @@ const AddPost = () => {
                     <textarea
                         id="content"
                         required
+                        onChange={(event) => setContent(event.target.value)}
                         placeholder="Enter a message"
                         rows="4" cols="50" />
                 </div>
