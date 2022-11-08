@@ -7,6 +7,25 @@ const AddPost = () => {
 
     const handleAddPost = async (event:any) => {
         event.preventDefault();
+
+        const response = await fetch('/api/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, content })
+        });
+        const data = await response.json();
+        console.log(data);
+        
+        if (data.success) {
+            setUsername('');
+            setContent('');
+            console.log('Post added successfully');
+            
+        } else { 
+            console.error(data.message);
+        }
     }
 
     return (
