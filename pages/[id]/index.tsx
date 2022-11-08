@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const Post = ({ post }) => {
+const DeletePost = ({ post }) => {
     const router = useRouter();
 
     const handleDeletePost = async () => {
@@ -33,7 +33,7 @@ const Post = ({ post }) => {
 };
 
 // ctx = context object 
-Post.getInitialProps = async (ctx:any) => {
+DeletePost.getInitialProps = async (ctx:any) => {
     const { id } = ctx.query;
 
     const res = await fetch(`http://localhost:3000/api/posts/${id}`);
@@ -43,4 +43,4 @@ Post.getInitialProps = async (ctx:any) => {
     return { post: data };
 }
 
-export default Post;
+export default DeletePost;
