@@ -20,6 +20,7 @@ const AddPost = () => {
                         id="username"
                         required
                         onChange={(event) => setUsername(event.target.value)}
+                        value={username}
                         placeholder="Username" />
                 </div>
                 <div className={styles.formGroup}>
@@ -28,6 +29,7 @@ const AddPost = () => {
                         id="content"
                         required
                         onChange={(event) => setContent(event.target.value)}
+                        value={content}
                         placeholder="Enter a message"
                         rows="4" cols="50" />
                 </div>
