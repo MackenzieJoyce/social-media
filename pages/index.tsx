@@ -22,6 +22,8 @@ const Home = ({ posts }) => {
               <div key={post._id} className={styles.card}>
                 <h4>{post.username}</h4>
                 <p>{post.content}</p>
+                <button>Delete</button>
+                <button>Edit</button>
                 {/* <img></img> */}
               </div>
             );
