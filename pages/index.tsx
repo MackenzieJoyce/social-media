@@ -1,7 +1,8 @@
-import Head from 'next/head';
+// import Head from 'next/head';
 import Header from '../components/Header';
 // import ExistingPosts from '../components/ExistingPosts';
-import AddPost from '../components/AddPost';
+// import AddPost from './api/posts/add-post';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 const Home = ({ posts }) => {
@@ -12,12 +13,13 @@ const Home = ({ posts }) => {
       </header>
 
       <main>
-        <AddPost />
+        {/* Commented out while I make it a modal... File moved into pages/api/posts */}
+        {/* <AddPost /> */}
         {/* <ExistingPosts /> */}
         <section>
           {posts.map((post: any) => {
             return (
-              <div key={post.id} className={styles.card}>
+              <div key={post._id} className={styles.card}>
                 <h4>{post.username}</h4>
                 <p>{post.content}</p>
                 {/* <img></img> */}
