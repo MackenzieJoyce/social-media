@@ -4,8 +4,8 @@ const AddPost = () => {
 
     const addPost = async (event:any) => {
         event.preventDefault();
+        
 
-        // Get the form data 
     }
 
     return (
@@ -37,8 +37,7 @@ const AddPost = () => {
                 <input
                     type="submit"
                     value="Add Post"
-                    className={styles.btn}
-                    onClick={addPost} />
+                    className={styles.btn} />
             </form>
         </>
     )
