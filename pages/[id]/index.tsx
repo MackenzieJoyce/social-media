@@ -10,12 +10,15 @@ const Post = ({ post }) => {
                 method: 'DELETE'
             });
             alert('Post deleted!');
-            router.push('/');
+            backHome();
         } catch (error) {
             console.log("Error in DELETE");
         }
     };
 
+    const backHome = () => {
+        router.push('/');
+    };
 
     return (
         <>
@@ -24,7 +27,7 @@ const Post = ({ post }) => {
             <p>{post.content}</p>
             <p>Are you sure?</p>
             <button onClick={handleDeletePost}>Yes</button>
-            <button>No</button>
+            <button onClick={backHome}>No</button>
         </>
     );
 };
