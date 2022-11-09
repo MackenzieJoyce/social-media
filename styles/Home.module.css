@@ -27,6 +27,10 @@
   text-align: left;
 }
 
+.card { 
+  min-width: 650px;
+}
+
 .form { 
   width: 50%;
 }
