@@ -4,24 +4,43 @@ import Button from '@mui/material/Button';
 import styles from '../styles/Home.module.css';
 
 const SignUp = () => {
-  // const { register, handleFormSubmit, errors } = useForm();
-  // const onSubmit = (data) => console.log(data);
-
-  const [formState, setFormState] = useState({
+  const [userInfo, setUserInfo] = useState({
     username: '',
-    email: '',
     password: ''
   });
-  console.log(formState);
+  console.log(userInfo);
   const router = useRouter();
 
   const handleChange = (event: any) => {
     const { name, value } = event.target;
+    setUserInfo({
+      ...userInfo,
+      [name]: value
+    });
   };
 
   const handleFormSubmit = async (event: any) => {
     event.preventDefault();
+
     console.log('Sign up entry was submitted!');
+
+    try {
+      const res = await fetch('http://localhost:3000/api/users', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userInfo)
+      });
+      backHome();
+    } catch (error) {
+      console.log('Error on handleFormSubmit ' + error);
+    }
+  };
+
+  const backHome = () => {
+    router.push('/');
   };
 
   return (
@@ -31,23 +50,23 @@ const SignUp = () => {
         <div className={styles.formGroup}>
           <label>Username</label>
           <input
+            type="text"
             id="username"
             name="username"
             placeholder="Username"
-            // ref={register({ required: true })}
+            onChange={handleChange}
           />
-          {/* {errors.firstName && <p>This field is required</p>} */}
         </div>
 
         <div className={styles.formGroup}>
           <label>Password</label>
           <input
+            type="password"
             id="password"
             name="password"
             placeholder="Password"
-            // ref={register({ required: true })}
+            onChange={handleChange}
           />
-          {/* {errors.password && <p>This field is required</p>} */}
         </div>
 
         <div className={styles.btnBox}>
