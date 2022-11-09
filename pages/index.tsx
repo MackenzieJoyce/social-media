@@ -4,8 +4,7 @@ import Button from '@mui/material/Button';
 
 const Home = ({ posts }) => {
   return (
-    <>
-      <section>
+      <section className={styles.container}>
         <h2>Existing Posts</h2>
         <div className={styles.postFeed}>
           {posts.map((post: any) => {
@@ -35,7 +34,6 @@ const Home = ({ posts }) => {
           })}
         </div>
       </section>
-    </>
   );
 };
 
