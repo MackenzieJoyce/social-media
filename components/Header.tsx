@@ -14,6 +14,11 @@ const Header = () => {
           Create Post
         </Button>
       </Link>
+      <Link href="/signup">
+        <Button variant="contained" color="info">
+          Sign Up
+        </Button>
+      </Link>
     </header>
   );
 };
