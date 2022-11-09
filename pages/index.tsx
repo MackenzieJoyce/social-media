@@ -2,29 +2,34 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Button from '@mui/material/Button';
 
-
 const Home = ({ posts }) => {
   return (
     <>
       <section>
         <h2>Existing Posts</h2>
-        <div className={styles.reverse}>
+        <div className={styles.postFeed}>
           {posts.map((post: any) => {
             return (
               <div key={post._id} className={styles.card}>
-                <h4>{post.username}</h4>
+                <div>
+                  <h4>{post.username}</h4>
 
-                <p>{post.content}</p>
+                  <p>{post.content}</p>
+                </div>
 
-                <Link href={`/${post._id}`}>
-                  <Button variant="outlined" color="error">
-                    Delete
-                  </Button>
-                </Link>
+                <div className={styles.btnBox}>
+                  <Link href={`/${post._id}/edit`}>
+                    <Button variant="contained" color="info">
+                      Edit
+                    </Button>
+                  </Link>
 
-                <Link href={`/${post._id}/edit`}>
-                <Button variant="contained" color='info'>Edit</Button>
-                </Link>
+                  <Link href={`/${post._id}`}>
+                    <Button variant="outlined" color="error">
+                      Delete
+                    </Button>
+                  </Link>
+                </div>
               </div>
             );
           })}

@@ -13,8 +13,6 @@ const Header = () => {
         <Button variant="contained" color="info">
           Create Post
         </Button>
-
-        {/* Create Post */}
       </Link>
     </div>
   );

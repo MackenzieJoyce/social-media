@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 const Layout = ({ children }) => {
   return (
-      <html className={styles.container}>
+      <div className={styles.container}>
       <Head>
         <title>Git Talking</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       </header>
 
       <main>{children}</main>
-    </html>
+    </div>
   );
 };
 
