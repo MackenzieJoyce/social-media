@@ -1,4 +1,5 @@
 # Social Media  
+The social media platform (Git Talking) is used to add posts to a public feed. The user is also able to edit and delete these posts once on the feed. 
 
 ## How To Use 
 Clone the repo: 
@@ -12,7 +13,13 @@ npm install
 npm run dev
 ```
 
-or view the deployed site: 
+or view the deployed site: [Heroku](https://git-talking.herokuapp.com/)
 
-## About 
-The web app is created to help coders get together on what's new. The user is able to create, update, or delete their own public posts. 
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
