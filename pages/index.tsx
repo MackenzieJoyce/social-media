@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import Button from '@mui/material/Button';
 
-const Home = ({ posts }) => {
+const Home = ({ posts }:any) => {
   return (
       <>
         <h2>Existing Posts</h2>

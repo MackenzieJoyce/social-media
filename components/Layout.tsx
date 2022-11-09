@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children }:any) => {
   return (
       <>
       <Head>

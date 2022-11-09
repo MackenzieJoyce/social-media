@@ -67,8 +67,8 @@ const AddPost = () => {
             required
             onChange={handleChange}
             placeholder="Enter a message"
-            rows="4"
-            cols="50"
+            rows={4}
+            cols={50}
           />
         </div>
         {/* <div className={styles.formGroup}>

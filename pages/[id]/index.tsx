@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const DeletePost = ({ post }) => {
+const DeletePost = ({ post }:any) => {
     const router = useRouter();
 
     const handleDeletePost = async () => {

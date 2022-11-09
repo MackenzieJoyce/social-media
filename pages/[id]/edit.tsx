@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-const EditPost = ({ post }) => {
+const EditPost = ({ post }:any) => {
   const [formState, setFormState] = useState({
     content: post.content
   });
@@ -44,11 +44,11 @@ const EditPost = ({ post }) => {
           id="content"
           name="content"
           required
-                  onChange={handleChange}
-                    value={formState.content}
+          onChange={handleChange}
+          value={formState.content}
           placeholder="Enter a message"
-          rows="4"
-          cols="50"
+          rows={4}
+          cols={50}
         />
         <input type="submit" />
       </form>
